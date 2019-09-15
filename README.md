@@ -6,8 +6,7 @@ Either way, this is a work in progress.
 
 Some example writeups:
 - [binary exploitation](comp6447-binary-exploitation/4/3/writeup.md)
-- [websec](picoctf-2018/forensics/flaskcards-and-freedom/writeup.md)
-- ...
+- [websec](overthewire/natas.md)
 
 If you are interested in reading writeups look under `/comp6447-binary-exploitation` since folder is pretty well kept.
 
