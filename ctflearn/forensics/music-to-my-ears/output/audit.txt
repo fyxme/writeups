@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Wed Sep 26 16:23:34 2018
+Invocation: foremost hereisyourflag.m4a 
+Output directory: /Users/louis/Desktop/sec/ctf/ctflearn/forensics/music-to-my-ears/output
+Configuration file: /usr/local/etc/foremost.conf
+------------------------------------------------------------------
+File: hereisyourflag.m4a
+Start: Wed Sep 26 16:23:34 2018
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.mov 	     149 KB 	         36 	 
+Finish: Wed Sep 26 16:23:34 2018
+
+1 FILES EXTRACTED
+	
+mov:= 1
+------------------------------------------------------------------
+
+Foremost finished at Wed Sep 26 16:23:34 2018
