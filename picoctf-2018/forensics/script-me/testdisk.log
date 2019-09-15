@@ -1,0 +1,17 @@
+
+
+Wed Oct 10 21:00:04 2018
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Darwin, kernel 17.7.0 (Darwin Kernel Version 17.7.0: Thu Jun 21 22:53:14 PDT 2018; root:xnu-4570.7
+Compiler: GCC 4.0
+Compilation date: 2015-04-18T13:01:34
+ext2fs lib: 1.42.8, ntfs lib: libntfs-3g, reiserfs lib: 0.3.1-rc8, ewf lib: 20120504, curses lib: ncurses 5.4
+User is not root!
+Hard disk list
+
+
+TestDisk exited normally.

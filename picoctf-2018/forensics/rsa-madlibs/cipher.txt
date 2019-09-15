@@ -1,0 +1,12 @@
+0x7069636f4354467b64305f755f6b6e30775f7468335f7740795f325f5253405f35643338336531307dL <type 'long'>
+Hello, Welcome to RSA Madlibs
+Keeping young children entertained, since, well, nev3r
+Tell us how to fill in the blanks, or if it's even possible to do so
+Everything, input and output, is decimal, not hex
+#### NEW MADLIB ####
+q : 93187
+p : 94603
+##### WE'RE GONNA NEED THE FOLLOWING ####
+n
+IS THIS POSSIBLE and FEASIBLE? (Y/N):#### TIME TO FILL IN THE MADLIB! ###
+n: 

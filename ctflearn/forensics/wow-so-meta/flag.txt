@@ -1,0 +1,1 @@
+Camera Serial Number            : flag{EEe_x_I_FFf}

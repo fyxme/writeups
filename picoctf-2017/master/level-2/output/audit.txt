@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Thu Sep 27 13:21:49 2018
+Invocation: foremost file 
+Output directory: /Users/louis/Desktop/sec/ctf/picoctf-2017/master/level-2/output
+Configuration file: /usr/local/etc/foremost.conf
+------------------------------------------------------------------
+File: file
+Start: Thu Sep 27 13:21:49 2018
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000080.zip 	     383 KB 	      41292 	 
+Finish: Thu Sep 27 13:21:49 2018
+
+1 FILES EXTRACTED
+	
+zip:= 1
+------------------------------------------------------------------
+
+Foremost finished at Thu Sep 27 13:21:49 2018

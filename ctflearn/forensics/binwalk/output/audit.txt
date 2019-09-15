@@ -1,0 +1,24 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Wed Sep 26 12:48:06 2018
+Invocation: foremost PurpleThing.jpeg -v 
+Output directory: /Users/louis/Desktop/sec/ctf/ctflearn/forensics/binwalk/output
+Configuration file: /usr/local/etc/foremost.conf
+------------------------------------------------------------------
+File: PurpleThing.jpeg
+Start: Wed Sep 26 12:48:06 2018
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	     149 KB 	          0 	  (780 x 720)
+1:	00000299.png 	      11 KB 	     153493 	  (802 x 118)
+Finish: Wed Sep 26 12:48:06 2018
+
+2 FILES EXTRACTED
+	
+png:= 2
+------------------------------------------------------------------
+
+Foremost finished at Wed Sep 26 12:48:06 2018

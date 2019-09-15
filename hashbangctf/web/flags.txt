@@ -1,0 +1,2 @@
+1. flag{join_the_dark_artz} (http://squ1rr3l-1.hashbangctf.com/) - SQL injection
+2. 

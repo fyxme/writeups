@@ -1,0 +1,12 @@
+HYPERSTREAM TEST #2
+30 points
+
+62 solves
+
+Cryptography
+
+Easy
+
+leg3ndaryphil
+
+I love the smell of bacon in the morning! ABAAAABABAABBABBAABBAABAAAAAABAAAAAAAABAABBABABBAAAAABBABBABABBAABAABABABBAABBABBAABB

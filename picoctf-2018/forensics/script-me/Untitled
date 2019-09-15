@@ -1,0 +1,184 @@
+from pwn import *
+import string
+import re
+
+def explode(s):
+    regex = r"^\((.+?)\)$"
+    m = re.match(regex, s)
+    return m.group(1)
+
+def get_split(p, start=False):
+    num_open = 1
+    if start:
+        idx = 0
+    else:
+        idx = 1
+    while(num_open):
+        idx += 1
+        # print idx
+        tmp = p[idx] if start else p[-idx]
+        if (tmp == ")" and start) or (tmp == "(" and not start):
+            num_open -= 1
+        else:
+            num_open += 1
+
+    return idx+1 if start else -idx
+
+def combine(p1,p2, lp1, lp2):
+    # () + () = ()()                                      => [combine]
+    # ((())) + () = ((())())                              => [absorb-right]
+    # () + ((())) = (()(()))                              => [absorb-left]
+
+    # (())(()) + (())(()) = (())(()())(())
+
+    # (())(()) + () = (())(()())                          => [combined-absorb-right]
+    # () + (())(()) = (()())(())                          => [combined-absorb-left]
+
+    # (())(()) + ( (()) ) = ( (())(()) (()) )                  => [absorb-combined-right]
+    # ( (()) ) + (())(()) = ( (()) (())(()) )                   => [absorb-combined-left]
+
+    # () + (()) + ((())) = (()()) + ((())) = ((()())(())) => [left-associative]
+
+    # Example:
+    # (()) + () = () + (()) = (()())
+
+    # Let's start with a warmup.
+    # ()()() + (()()()) = ???
+
+    # combine
+    if p1 == "()" and p2 == "()":
+        return p1 + p2
+
+    # absorb-right
+    # combined-absorb-right
+    if p2 == "()":
+        return "({}{})".format(explode(p1), p2)
+
+    # absorb-left
+    # combined-absorb-left
+    if p1 == "()":
+        return "({}{})".format(p1, explode(p2))
+
+    # (())(()) + ( (()) ) = ( (())(()) (()) )                  => [absorb-combined-right]
+    # ( (()) ) + (())(()) = ( (()) (())(()) )                  => [absorb-combined-left]
+
+    # absorb combined right
+    if lp1 == len(p1):
+        pass
+
+    # absorb combined left
+    if lp2 == len(p2):
+        pass
+
+    # print "combine"
+    return "({}{})".format(explode(p1), explode(p2))
+
+def solve(p1, p2):
+    # return combine(p1,p2)
+    print "p1: ", p1, "p2:", p2
+
+    p1_s = get_split(p1)
+    p2_s = get_split(p2, start=True)
+    print "p_s :", p1_s, p2_s
+
+    p1_tmp = p1[p1_s:]
+    p1_start = p1[:p1_s]
+    p2_tmp = p2[:p2_s]
+    p2_end = p2[p2_s:]
+
+    lp1 = len(p1)
+    lp2 = len(p2)
+
+    print "p_tmp:", p1_tmp, p2_tmp
+    print "p_other", p1_start, p2_end
+    # print "solved:", p1_start + combine(p1_tmp, p2_tmp) + p2_end
+    # return p1_start + combine(p1_tmp, p2_tmp, lp1, lp2) + p2_end
+
+    # combine
+    if p1_tmp == "()" and p2_tmp == "()":
+        return p1_start + p1_tmp + p2_tmp + p2_end
+
+    # absorb-right
+    # combined-absorb-right
+    if p2_tmp == "()":
+        return p1_start + "({}{})".format(explode(p1_tmp), p2_tmp) + p2_end
+
+    # absorb-left
+    # combined-absorb-left
+    if p1_tmp == "()":
+        return p1_start + "({}{})".format(p1_tmp, explode(p2_tmp)) + p2_end
+
+    # (())(()) + ( (()) ) = ( (())(()) (()) )                  => [absorb-combined-right]
+    # ((())) + (())(()) = ( (()) (())(()) )                  => [absorb-combined-left]
+
+    if lp1 == len(p1_tmp) and lp2 == len(p2_tmp):
+        return "({}{})".format(explode(p1), explode(p2))
+
+    # absorb combined right
+    if lp1 == len(p1_tmp):
+        # print "here:", "({}{})".format(explode(p1), p2)
+        return "({}{})".format(explode(p1), p2)
+
+    # absorb combined left
+    if lp2 == len(p2_tmp):
+        return "({}{})".format(p1, explode(p2))
+
+    return "({}{})".format(p1, explode(p2))
+
+def recurse(current, q):
+    if len(q) < 2:
+        return solve(current, q[0])
+
+    return recurse(solve(current, q[0]),q[1:])
+
+def get_q(c):
+    resp = c.recvrepeat(0.6)
+    print resp
+    resp = resp.split('\n')
+    q = resp[-3]
+    print q
+    q = q.split("=")[0].split("+")
+    q = map(string.strip, q)
+    print q
+
+    return q
+
+
+"""
+() + () = ()()                                      => [combine]
+((())) + () = ((())())                              => [absorb-right]
+() + ((())) = (()(()))                              => [absorb-left]
+(())(()) + () = (())(()())                          => [combined-absorb-right]
+() + (())(()) = (()())(())                          => [combined-absorb-left]
+(())(()) + ((())) = ((())(())(()))                  => [absorb-combined-right]
+((())) + (())(()) = ((())(())(()))                  => [absorb-combined-left]
+() + (()) + ((())) = (()()) + ((())) = ((()())(())) => [left-associative]
+"""
+
+assert(solve("()", "()") == "()()") # [combine]
+assert(solve("((()))", "()") == "((())())") # [absorb-right]
+assert(solve("()", "((()))") == "(()(()))") # [absorb-left]
+assert(solve("(())(())", "()") == "(())(()())") # [combined-absorb-right]
+assert(solve("()", "(())(())") == "(()())(())") # [combined-absorb-left]
+assert(solve("(())(())", "((()))") == "((())(())(()))") # [absorb-combined-right]
+assert(solve("((()))", "(())(())") == "((())(())(()))") # [absorb-combined-left]
+# assert(solve("(()())", "((()))") == "((()())(()))")
+test = map(string.strip, "() + (()) + ((()))".split("+"))
+assert(recurse(test[0], test[1:]))
+
+
+c = connect("2018shell1.picoctf.com", 8672)
+
+q = get_q(c)
+
+q = recurse(q[0], q[1:])
+print "Solved:", q
+
+c.sendline(q)
+
+q = get_q(c)
+q = recurse(q[0],q[1:])
+print "Solved:", q
+
+c.sendline(q)
+c.interactive()

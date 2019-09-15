@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Wed Sep 26 22:55:17 2018
+Invocation: foremost test 
+Output directory: /Users/louis/Desktop/sec/ctf/ctflearn/forensics/noise/_gift-box.png.extracted/output
+Configuration file: /usr/local/etc/foremost.conf
+------------------------------------------------------------------
+File: test
+Start: Wed Sep 26 22:55:17 2018
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Wed Sep 26 22:55:17 2018
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Wed Sep 26 22:55:17 2018
