@@ -7,6 +7,8 @@ This repo contains a few of the ctf and wargames I've participated in. The repo 
 - `./firehose/` contains all the challenges which have yet to be sorted
 - `./<challenge type>/` contain challenges specific to the specified type
     - `./<challenge type>/<ctf name>/` contains all challenges of that type from that specific ctf
+        - `./<challenge type>/<ctf name>/<challenge name>/` contains the challenge's files when possible and a writeup of the challenge
+
 
 ## Interesting Writeups
 
