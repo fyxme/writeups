@@ -25,7 +25,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.48 seconds
 ```
 
 We get a username and the hostname thanks to the email address:
-[Pasted image 20210731171508.png](Pasted image 20210731171508.png)
+![Pasted image 20210731171508.png](Pasted image 20210731171508.png)
 
 ```
 jkr@writeup.htb
@@ -34,10 +34,10 @@ jkr@writeup.htb
 We set /etc/hosts in case the virtual hosts are setup. Webpage doesnt change.
 
 We find stuff in robots.txt
-![[Pasted image 20210731171725.png]]
+![Pasted image 20210731171725.png](Pasted image 20210731171725.png)
 
 By curling the page we can see what software the application is using due to comments:
-![[Pasted image 20210731172329.png]]
+![Pasted image 20210731172329.png](Pasted image 20210731172329.png)
 
 Found an exploit which works:
 ```
