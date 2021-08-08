@@ -1,4 +1,4 @@
-![[Pasted_image_20210731221138.png]]
+![Pasted_image_20210731221138.png](Pasted_image_20210731221138.png)
 
 Starting with nmap as always. I've already preran a quickscan and will run only on the other ports:
 ```
@@ -315,7 +315,7 @@ INFO: Done in 00M 09S
 ```
 
 Used Bloodhound to identify the fastest path to htb.local domain:
-![[Pasted_image_20210801012609.png]]
+![Pasted_image_20210801012609.png](Pasted_image_20210801012609.png)
 
 Based on the above Bloodhound graph, we can add ourselves to the "Exchange Windows Permissions" groups since have have generic all permissions on it:
 
@@ -441,10 +441,10 @@ f048153f202bbb2f82622b04d79129cc
 **Additional Bloodhound images**
 
 Service account to Valuable targets:
-![[Pasted_image_20210801012204.png]]
+![Pasted_image_20210801012204.png](Pasted_image_20210801012204.png)
 
 Path from SVC-ALFRESCO to HTB.LOCAL:
-![[Pasted_image_20210801011722.png]]
+![Pasted_image_20210801011722.png](Pasted_image_20210801011722.png)
 
 
 **Additional notes**

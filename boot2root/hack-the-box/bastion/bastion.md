@@ -1,5 +1,5 @@
 
-![[Pasted_image_20210714213410.png]]
+![Pasted_image_20210714213410.png](Pasted_image_20210714213410.png)
 
 IP = "10.10.10.134"
 

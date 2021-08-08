@@ -1,4 +1,4 @@
-![[Pasted_image_20210731161938.png]]
+![Pasted_image_20210731161938.png](Pasted_image_20210731161938.png)
 
 Starting with nmap:
 ```
@@ -52,7 +52,7 @@ Nmap done: 1 IP address (1 host up) scanned in 16.51 seconds
 
 Website on port 80:
 
-![[Pasted_image_20210731162303.png]]
+![Pasted_image_20210731162303.png](Pasted_image_20210731162303.png)
 
 ```
 % exiftool bug.jpg
