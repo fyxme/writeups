@@ -2,7 +2,7 @@
 
 This month was pretty eventful with Hacky Holidays having a 3 week long CTF and HackTheBox releasing their "Take It Easy Dare". This made for a lot of opportunities to practice and some great challenges to learn new things.
 
-![[htb-take-it-easy-dare-header.jpg]]
+![htb-take-it-easy-dare-header.jpg](_img/htb-take-it-easy-dare-header.jpg)
 
 Ref: https://www.hackthebox.eu/newsroom/htb-take-it-easy-july-2021
 
@@ -10,11 +10,11 @@ HTB "Take It Easy Dare" was essentially a number of retired easy boxes that were
 
 The following machines were made available as part of the easy month:
 
-![[easy-month-machines.jpg]]
+![easy-month-machines.jpg](_img/easy-month-machines.jpg)
 
 I was only able to start on these boxes the last weekend of July since the other weekends were spent participating in the Hacky Holidays Space Race CTF. However, I managed to get all 8 boxes done during those 2 days:
 
-![[htb-take-it-easy-solved-boxes.png]]
+![htb-take-it-easy-solved-boxes.png](_img/htb-take-it-easy-solved-boxes.png)
 
 I hadn't done any of the boxes prior to easy month so it was a great challenge to try and achieve all of them in 2 days.
 
