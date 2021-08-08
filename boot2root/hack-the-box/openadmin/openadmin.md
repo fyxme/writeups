@@ -1,4 +1,4 @@
-![[Pasted image 20210801191010.png]]
+![[Pasted_image_20210801191010.png]]
 
 As always we start with nmap:
 ```
@@ -40,7 +40,7 @@ Nmap done: 1 IP address (1 host up) scanned in 24.14 seconds
 ```
 
 Port 80 has a default apache webpage:
-![[Pasted image 20210801150933.png]]
+![[Pasted_image_20210801150933.png]]
 
 We run ffuf and identify 3 paths:
 ```
@@ -76,22 +76,22 @@ sierra                  [Status: 301, Size: 313, Words: 20, Lines: 10]
 Each path is a different website:
 
 _music_
-![[Pasted image 20210801151031.png]]
+![[Pasted_image_20210801151031.png]]
 
 _artwork_
-![[Pasted image 20210801151047.png]]
+![[Pasted_image_20210801151047.png]]
 
 _sierra_
-![[Pasted image 20210801151104.png]]
+![[Pasted_image_20210801151104.png]]
 
 Had a look at the websites and didnt find anything of interest. Doesnt seem to be a Wordpress wesbite. No forms, nothing of interest.
 
 However, after looking through burp logs, I found that the login button on the music website links to http://10.10.10.171/ona :
-![[Pasted image 20210801185318.png]]
+![[Pasted_image_20210801185318.png]]
 
 Which is **OpenNetAdmin v18.1.1**:
 
-![[Pasted image 20210801185123.png]]
+![[Pasted_image_20210801185123.png]]
 
 And that exact version has an RCE avaiable:
 ```
@@ -386,7 +386,7 @@ User joanna may run the following commands on openadmin:
 ```
 
 gtfobins has a command to exploit `nano`:
-![[Pasted image 20210801183858.png]]
+![[Pasted_image_20210801183858.png]]
 
 And we can get root using it:
 ```

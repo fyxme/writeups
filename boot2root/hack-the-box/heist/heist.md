@@ -1,4 +1,4 @@
-![[Pasted image 20210801191251.png]]
+![[Pasted_image_20210801191251.png]]
 
 Nmap scan reveals 80, 135, 445, 5985 and 49669 open:
 ```
@@ -49,7 +49,7 @@ session setup failed: NT_STATUS_ACCESS_DENIED
 ```
 
 The website on port 80 has a user describing an issue to a support admin and a link to an attachment:
-![[Pasted image 20210801192658.png]]
+![[Pasted_image_20210801192658.png]]
 
 The attachment (http://10.10.10.149/attachments/config.txt) contains a cisco router config file: 
 ```
@@ -131,7 +131,7 @@ Q4)sJu\Y8qz*A3?d
 ```
 
 The homepage also hints at a user being created on the server for the "Hazard" user:
-![[Pasted image 20210801194200.png]]
+![[Pasted_image_20210801194200.png]]
 
 We can try the passwords we cracked and attempt to use those and find that the credentials `Hazard:stealth1agent` are valid:
 ```
