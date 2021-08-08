@@ -1,4 +1,4 @@
-![[Pasted_image_20210801105407.png]]
+![Pasted_image_20210801105407.png](Pasted_image_20210801105407.png)
 
 Starting with an nmap scan reveals port 80 and 22 open:
 ```
@@ -20,7 +20,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Retrieving a 404 page http://10.10.10.165/robots.txt reveals the server type and version:
 
-![[Pasted_image_20210801111011.png]]
+![Pasted_image_20210801111011.png](Pasted_image_20210801111011.png)
 
 We use searchsploit to search for vulnerabilities for that web server and find that it has an rce for that specific version:
 ```
@@ -208,7 +208,7 @@ HOMEDIRS
 We can access david's public dir using the following url:
 http://traverxec.htb/~david/
 
-![[Pasted_image_20210801145724.png]]
+![Pasted_image_20210801145724.png](Pasted_image_20210801145724.png)
 
 However, this doens't expose anything but this confirm that HOMEDIRS is working as expected and that the `david` user is exposing a `public_www` folder. So we can try to access his folder from cli:
 ```
