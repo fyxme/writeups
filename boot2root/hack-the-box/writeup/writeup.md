@@ -25,7 +25,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.48 seconds
 ```
 
 We get a username and the hostname thanks to the email address:
-![[Pasted image 20210731171508.png]]
+[Pasted image 20210731171508.png](Pasted image 20210731171508.png)
 
 ```
 jkr@writeup.htb
