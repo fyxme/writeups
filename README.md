@@ -1,5 +1,7 @@
 # CTF & Wargames - writeups and exploits
 
+*Note: Currently working on moving writeups out from this repo and onto https://fyx.me/*
+
 This repo contains a few of the ctf and wargames I've participated in. The repo is currently a mess and needs to be cleaned up. Some challenges have the exploits and not the writeup and other have the writeup but no exploit script.
 
 ## Folder structure
