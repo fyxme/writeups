@@ -7,7 +7,7 @@ The CTF was ongoing for 4 weeks which is considered quite long for a CTF but lea
 We played in all 3 phases and managed to do quite a few of the challenges. However, CTFs are quite draining and take a lot of time so its hard to sustain for extended period of times. Most of our hacking was done the weekends after the release and we didnt have the motivation to do any challenges in the last week.
 
 Here's all the challenges we ended up doing:
-![[hacky holidays - space race.png]]
+![hacky_holidays-space_race.png](_img/hacky_holidays-space_race.png)
 
 ## Awesome
 - The challenges were amazing and very diverse
@@ -44,4 +44,4 @@ Not much to complain about... It was a really fun CTF!
 
 Would recommend any cyber security enthousiast to participate in the next Hacky Holidays CTF. 
 
-![[great-success.gif]]
+![great-success.gif](_img/great-success.gif)
