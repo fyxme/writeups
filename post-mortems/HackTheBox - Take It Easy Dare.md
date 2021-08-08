@@ -19,7 +19,8 @@ I was only able to start on these boxes the last weekend of July since the other
 I hadn't done any of the boxes prior to easy month so it was a great challenge to try and achieve all of them in 2 days.
 
 I've done writeups for all of the boxes as a way to practice using Obsidian as a note taking app:
-- <...add writeups here...>
+
+https://github.com/fyxme/writeups/tree/master/boot2root/hack-the-box
 
 ## Favorite box
 
