@@ -1,4 +1,4 @@
-![[Pasted image 20210801104841.png]]
+![Pasted_image_20210801104841.png](Pasted_image_20210801104841.png)
 
 Starting with an nmap scan reveals a lot of ports open and that this is a windows box:
 ```
@@ -332,7 +332,7 @@ INFO: Done in 00M 03S
 ```
 
 We load everything into Bloodhound and find that we can kerberoast the Administrator:
-![[Pasted image 20210801103112.png]]
+![Pasted_image_20210801103112.png](Pasted_image_20210801103112.png)
 
 When trying to kerberoast the admin, we get an error with the clock skew. This usually happens if there are large time differences between the machine and the target:
 ```
