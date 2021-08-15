@@ -1,3 +1,5 @@
+# Deleted flag
+
 ![](https://i.imgur.com/pP4sEqo.png)
 
 > [200 points]

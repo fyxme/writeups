@@ -1,3 +1,5 @@
+# Skylark Capsule
+
 ![](Pasted%20image%2020210809192708.png)
 
 *TLDR: This is a 2 step challenge where the first steps consist in crack a JWT token and crafting a modified JWT token. The second steps consists of finding a CRC-32 hash collision in order to login to the admin account.*

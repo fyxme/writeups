@@ -1,3 +1,5 @@
+# Scorching
+
 ![](Pasted%20image%2020210809214455.png)
 
 hash.txt file provided contains an NTLM hash:
