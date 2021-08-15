@@ -4,10 +4,10 @@
 
 ## Interesting Writeups
 
-- [\[redteam\] Using PrintNightmare to exploit a vulnerable DC](ctf/hacky-holidays-space-race/dreams)
-- [\[redteam\] NTLM hash cracking and using that hash for kerberoasting](ctf/hacky-holidays-space-race/scorching)
-- [\[web\] Weak JWT secret cracking. CRC-32 hash collision to login to admin](ctf/hacky-holidays-space-race/skylark-capsule)
-- [\[pwn\] Bypass seccomp to read a flag from an open file descriptor](ctf/hacky-holidays-space-race/deleted-flag)
+- \[redteam\] [Dreams :: Using PrintNightmare to exploit a vulnerable DC](ctf/hacky-holidays-space-race/dreams)
+- \[redteam\] [Scorching :: NTLM hash cracking and using that hash for kerberoasting](ctf/hacky-holidays-space-race/scorching)
+- \[web\] [Skylark Capsule :: Weak JWT secret cracking. CRC-32 hash collision to login to admin](ctf/hacky-holidays-space-race/skylark-capsule)
+- \[pwn\] [Deleted Flag :: Bypass seccomp to read a flag from an open file descriptor](ctf/hacky-holidays-space-race/deleted-flag)
 
 ------------
 
